@@ -1,0 +1,110 @@
+
+.OtherContractors-icons{
+    display: flex;
+    flex-direction: row;
+column-gap: 5vw;
+}
+.OtherContractors-icon{
+  
+    color:   #5440d3;
+ font-size: 1.5rem;
+}
+.OtherContractors-table{
+   margin-inline: auto;
+   padding:max(3vh,1rem);
+}
+
+.OtherContractors-top{
+    margin-inline: auto;
+    padding:max(3vh,1rem); 
+    flex-direction: row;
+column-gap: 5vw;
+
+display: flex;
+justify-content: space-between;
+}
+.OtherContractors-body{
+  /* margin-left:110px;
+
+  position: absolute;
+  top: 150px;
+  background-color: white;
+
+
+  border-radius: 5px;
+
+  min-height:calc(100% - 170px); ;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2); */
+
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 1500px;
+  background-color:white;
+  /* padding: 20px; */
+  /* text-align: center; */
+  border-radius: 5px;
+  min-height:calc(100% - 170px); 
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+
+}
+.OtherContractors-add-btn {
+    display: inline-block;
+    padding: 15px 15px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #F2BA1D;
+    border: none;
+    border-radius:2rem;
+
+  }
+  .btn{
+    display: flex; justify-content: flex-end}
+
+  @media (max-width: 768px) {
+   
+    .OtherContractors-icon{
+  
+   
+     font-size: 1rem;
+    }
+    .LongTermContractors-add-btn{
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+    .OtherContractors-icons{
+        column-gap: 2.5vw;
+    }
+  }
+  .OtherContractors-List-btn-grp .OtherContractors-List-btn{
+    /* background-color:rgb(186, 219, 231); */
+    background-color:rgb(165, 186, 196);
+    border: none;
+    color:  #5440d3;;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 3px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    border-radius: 0px;
+  
+    text-transform: uppercase;
+  }
+  .OtherContractors-List-btn-grp .OtherContractors-List-btn:not(:last-child) {
+    border-right: none;
+  }
+  
+  .OtherContractors-List-btn-grp .OtherContractors-List-btn:hover {
+    background-color: #9cad9c;
+  }
+ 

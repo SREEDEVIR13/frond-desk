@@ -1,0 +1,44 @@
+.admin-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #5440d3;
+    height: 90px;
+  }
+  
+  nav {
+    display: none;
+  }
+  
+  .swagat-logo {
+    width: 10%;
+    filter: invert(1) sepia(19%) saturate(590%) hue-rotate(180deg)
+      brightness(193%) contrast(100%);
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .admin-header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    nav {
+      display: flex;
+      align-items: center;
+    }
+  
+    ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  
+    li {
+      margin: 0 10px;
+    }
+  }
+  .home-icon {
+    color: #ffff;
+  }

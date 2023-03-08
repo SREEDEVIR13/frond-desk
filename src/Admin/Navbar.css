@@ -1,0 +1,145 @@
+html,
+body {
+  height: 100%;
+}
+input{
+  border:0 !important;
+  border-radius: 0 !important;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.322) !important;
+}
+body {
+  background-color: #F2F2F2 !important;
+}
+
+* {
+  color: black !important;
+}
+
+.colorassign {
+  background-color: #502ACD;
+}
+
+.imageSizeAssign {
+  width: 30%;
+}
+
+.widthAssign {
+  width: 7%;
+}
+
+@media (min-width:768px) {
+  #root {
+    position: relative;
+  }
+
+  .sizeAssign {
+    font-size: 0.9rem !important;
+    text-align: center;
+  }
+
+  .FillName {
+    padding: 15px 0 0 0 ;
+    color: black !important;
+    margin-bottom:15px ;
+    margin-left: 5%;
+  }
+
+  .marginAssignNavbar {
+    width: 100%;
+    margin-inline: 20px;
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .rowTrackingBar>div {
+    padding: 0 !important;
+    width: fit-content;
+    border: 0;
+  }
+
+  .col-sm-6>div {
+    border: 0;
+
+  }
+
+  .rightBorderClass {
+    border-right: 1px solid #80808083 !important;
+  }
+
+  .bottomBorderClass {
+    border-bottom: 0 !important;
+  }
+
+  .rowTrackingBar {
+    margin-block: 2%;
+    margin-bottom: 0 !important;
+    border-bottom: 1px solid #80808083;
+  }
+
+  .imageCenterAlign {
+    margin:0  auto;
+  }
+  .card-img-top {
+    width: 50% !important;
+}
+  .formClass {
+    padding: 1%;
+  }
+
+  .widthSidebarForms {
+    margin-Right: 20px;
+    /* margin-left: 20px; */
+    right: 0;
+    width: calc(100% - 300px);
+    position: absolute;
+    top: 110px;
+    background-color: white;
+    /* height: calc(100vh + 10% - 150px); */
+    border-radius: 5px;
+    height: auto;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  .widthSidebar {
+    margin-left: 20px;
+    /* width: 300px; */
+    position: absolute;
+    top: 110px;
+    background-color: white;
+
+    /* height: calc(100vh + 10% - 150px); */
+    border-radius: 5px;
+    /* height: calc(100% - 170px); */
+    min-height:calc(100% - 170px); ;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+
+  }
+  .iconAlign{
+    display: flex;
+  }
+.marginAutoIcon{
+    margin:0 auto;
+    margin-top:auto;
+}
+  .imageSizeAssign {
+    width: 100%;
+  }
+
+  .heightassign {
+    height: 150px;
+  }
+
+  .left-auto {
+    margin-left: auto !important;
+  }
+
+  .paddingAssign {
+    padding: 0 0 50px 0;
+  }
+}
+.form-inline{
+    display: flex;
+    align-items: center;
+}

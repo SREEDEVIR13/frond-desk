@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
 
+import Dummy from './Admin/Dummy';
+import VisitorsList from './Admin/VisitorsList';
+import './App.css';
+import Navbar from './Admin/Navbar';
+
+import TableGrid from './Admin/TableGrid';
+import { Button } from '@material-ui/core';
+import {Route,Routes } from 'react-router-dom';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+<div className="App">
+      <Routes>
+        <Route path='/admin-dashboard' element={<AdminDashboard></AdminDashboard>}></Route>
+ 
+        <Route path='/navbar-list' element={<Navbar></Navbar>}></Route> 
+
+       </Routes>
     </div>
   );
 }

@@ -1,0 +1,7 @@
+.GuestGrid-top{display: flex;
+    justify-content: space-between;
+    margin-inline: auto;
+    padding:max(3vh,1rem); 
+    flex-direction: row;
+column-gap: 5vw;
+  }

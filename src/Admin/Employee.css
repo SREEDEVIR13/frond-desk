@@ -1,0 +1,138 @@
+
+.Employee-icons{
+    display: flex;
+    flex-direction: row;
+column-gap: 5vw;
+}
+.Employee-icon{
+  
+    color:   #5440d3;
+ font-size: 1.5rem;
+}
+.Employee-table{
+   margin-inline: auto;
+   padding:max(3vh,1rem);
+}
+
+.Employee-top{
+    margin-inline: auto;
+    padding:max(3vh,1rem); 
+    flex-direction: row;
+column-gap: 5vw;
+
+display: flex;
+justify-content: space-between;
+}
+.Employee-body{
+  margin-left:110px;
+  /* width: 300px; */
+  position: absolute;
+  top: 150px;
+  background-color: white;
+
+  /* height: calc(100vh + 10% - 150px); */
+  border-radius: 5px;
+  /* height: calc(100% - 170px); */
+  min-height:calc(100% - 170px); ;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.Employee-add-btn {
+    display: inline-block;
+    padding: 15px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #F2BA1D;
+    border: none;
+    border-radius:2rem;
+
+  }
+  .btn{
+    display: flex; justify-content: flex-end}
+
+  @media (max-width: 768px) {
+   
+    .Employee-icon{
+  
+   
+     font-size: 1rem;
+    }
+    .Employee-add-btn{
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+    .Employee-icons{
+        column-gap: 2.5vw;
+    }
+  }
+  .Employee-List-btn-grp .Employee-List-btn{
+    /* background-color:rgb(186, 219, 231); */
+    background-color:rgb(165, 186, 196);
+    border: none;
+    color:  #5440d3;;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 3px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    border-radius: 0px;
+  
+    text-transform: uppercase;
+  }
+  .Employee-List-btn-grp .Employee-List-btn:not(:last-child) {
+    border-right: none;
+  }
+  
+  .Employee-List-btn-grp .Employee-List-btn:hover {
+    background-color: #9cad9c;
+  }
+  /* .dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  } */
+  
+  .Employee-dropdown{
+    position: relative;
+    display: inline-block;
+  }
+  
+  .Employee-dropdown-content{
+    display: none;
+    position: absolute;
+    background-color:white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .Employee-dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+ .Employee-dropdown-content a:hover {background-color: #9cad9c;}
+  
+  .Employee-dropdown:hover .Employee-dropdown-content {
+    display: block;
+  }
+  
+  .checkbox{
+    display: flex;
+    position: absolute;
+    background-color: white;
+    padding: 15px;
+    border: 1px solid rgb(204, 204, 204);
+  }
