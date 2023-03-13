@@ -8,7 +8,7 @@ import { Button } from '@mui/material';
 import "./VisitorsGrid.css"
 import {  useNavigate } from "react-router-dom";
 // const [List ,setList] = useState(false);
-import "./GuestList.css"
+import "./LongTermContractors.css"
 
 function LongTermGrid() {
   const [rows, setRows] = useState([]);
@@ -19,12 +19,12 @@ function LongTermGrid() {
 
   const   Employee= () => {
  
-    Navigate("/employee-list");
+    Navigate("/employee");
   };
 
   const   OtherContractors = () => {
 
-    Navigate("/othersContractors-list");
+    Navigate("/othersContractors");
   };
   
 
@@ -58,15 +58,7 @@ function LongTermGrid() {
     field: 'timestamp',
     headerName: 'Out Time',
     width: 200,
-    // renderCell: (params) => {
-    //     const handleClick = () => {
-    //       const currentTime = new Date().toLocaleTimeString();
-    //       setTime(currentTime);
-          
-    //       axios.post(`https://localhost:7194/api/Visitors/VisitorCheckOut?id=${params.id}`, { time: currentTime });
-    //     };
-    //     return <button onClick={handleClick}>Check out</button>;
-    //   },
+ 
     renderCell: (params) => {
       const [time, setTime] = useState("");
       const [clicked, setClicked] = useState(false);
@@ -100,34 +92,33 @@ function LongTermGrid() {
 
 
   return (
-    <div className='Guest-grid'>
+    <div className='LongTerm-grid'>
 <Navbar/>
-<div className='Guestgrid-body'>
+<div className='LongTermContractors-body'>
 
-    <div className='GuestGrid-top'>
-    <div className="Guest-List-btn-grp">
-            <button  onClick={() => {
-                   
-                   VisitorsList();
-                   }}  className= "Guest-List-btn">Visitors List</button>
-            <button   style= {{backgroundColor:"rgb(225, 232, 235)"}}   className= "Guest-List-btn">Guest List</button>
-            
-<div class="Guest-dropdown">
-<button   className= "Guest-List-btn">Contractors<Icons.FaCaretDown/></button>
-  <div class="Guest-dropdown-content">
-  <a href="employee-list">Employee</a>
-  <a href="longTermContractors-list">Long Term Contractors</a>
-  <a href="othersContractors-list">Other Contractors</a>
-  </div>
-</div>
-        </div>
+    <div className='LongTermContractors-top'>
+    <div className="LongTermContractors-List-btn-grp">
+          
+          <button  onClick={() => {
+                 
+                Employee();
+                 }}    className= "LongTermContractors-List-btn">Employee</button>
+          <button  style= {{backgroundColor:"rgb(225, 232, 235)"}}  className= "LongTermContractors-List-btn">Long Term Contractors</button>
+
+<button  onClick={() => {
+                 
+                 OtherContractors();
+                 }}   className= "LongTermContractors-List-btn">Other Contractors</button>
 
 
-    <div className='Guest-icons'>
+      </div>
+
+
+    <div className='LongTermContractors-icons'>
     <button onClick={() => {
                    
-                   AddVisitor();
-                   }}  className="Guest-add-btn">Add Guest</button>
+                   AddLongTermContractor();
+                   }}   className="LongTermContractors-add-btn">Add Long Term Contractors</button>
     </div>
     </div>
 
@@ -136,8 +127,12 @@ function LongTermGrid() {
         rows={rows}
         columns={columns}
         
-        pageSize={10}
-        rowsPerPageOptions={[5, 10, 25]}
+           
+        initialState={{
+          pagination: {
+            paginationModel: { pageSize: 25, page: 0 },
+          },
+        }}
         checkboxSelection
         disableSelectionOnClick
       />

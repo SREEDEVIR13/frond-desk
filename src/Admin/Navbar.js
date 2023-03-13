@@ -10,7 +10,14 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@mui/material/Button';
 import Paper from '@material-ui/core/Paper';
 import * as Icons from "react-icons/fa";
+import {  useNavigate } from "react-router-dom";
+
+import { useHistory } from "react-router-dom";
+
 const useStyles = makeStyles((theme) => ({
+
+  
+
   root: {
     flexGrow: 1,
   },
@@ -47,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
   },
   inputInput: {
     padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
+
     paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
     transition: theme.transitions.create('width'),
     width: '100%',
@@ -67,7 +74,12 @@ const useStyles = makeStyles((theme) => ({
 }));
 export default function MyAppBar() {
   const classes = useStyles();
+  const Navigate = useNavigate();
 
+  const  home = () => {
+  
+    Navigate("/");
+  };
   return (
     <div className={classes.root}>
       <AppBar position="static" className={classes.violet}>
@@ -80,9 +92,12 @@ export default function MyAppBar() {
            maxWidth: { xs: 350, md: 250 },
         }}
          alt="Logo."
-         src="/Image/logo222.png" className="suyati-logo" 
+         src="/Image/SwagatLogo.png" className="suyati-logo" 
 
-       />  <Icons.FaHome  size={"5ch"} />
+       />  <Icons.FaHome  onClick={() => {
+                   
+       home();
+        }} size={"5ch"} />
            <div className={classes.title}></div>
           <Paper component="form" className={classes.searchBox}>
             <IconButton className={classes.searchIcon}>

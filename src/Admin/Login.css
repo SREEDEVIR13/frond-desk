@@ -1,0 +1,211 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+.wrapper{
+    object-fit: cover;
+    padding: 0 20px 0 20px;
+    width: 100%; 
+    height: 100%;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.login-row{
+    width: 900px;
+    height: 550px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 5px 5px 10px 1px rgba(0,0,0,0.2);
+}
+.side-image {
+    background-image: url("../../public/Image/backgroundImage.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 10px 0 0 10px;
+}
+.GoogleSSO{
+    padding-top: 200px;
+}
+.img1 {
+    max-width: 67%;
+}
+.img2 {
+    width: 715px;
+    position: absolute;
+    top: 100px;
+    left: -101px;
+}
+
+.logo{
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: row; 
+    margin-top: 10%;
+}
+
+.text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.text p{
+    color: #fff;
+    font-size: 18px;
+}
+i{
+    font-weight: 400;
+    font-size: 15px;
+}
+.right{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.input-box{
+    width: 330px;
+    box-sizing: border-box;
+}
+.input-box header{
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 45px;
+}
+.input-field{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0 10px 0 10px;
+}
+.input{
+    height: 32px;
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    outline: none;
+    margin-bottom: 38px;
+    color: #40414a;
+}
+.input-box .input-field label{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-field .input:focus ~ label{
+    top: -10px;
+    font-size: 13px;
+}
+.input-field .input:valid ~ label{
+    top: -10px;
+    font-size: 13px;
+    color: #5d5076;
+}
+.input-field .input:focus, .input-field .input:valid{
+    border-bottom: 1px solid #743ae1;
+}
+.submit{
+    border: none;
+    outline: none;
+    height: 45px;
+    background: #002B89;
+    color: #fff;
+    border-radius: 5px;
+    transition: .4s;
+}
+.submit:hover{
+    background: #1f52bf;
+    color: #fff;
+}
+.signin{
+    text-align: center;
+    font-size: small;
+    margin-top: 25px;
+}
+span a{
+    text-decoration: none;
+    font-weight: 700;
+    color: #000;
+    transition: .5s;
+}
+span a:hover{
+    text-decoration: underline;
+    color: #000;
+}
+.error{
+    color: red;
+}
+.Separator{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    text-transform: uppercase;
+    border: none;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0;
+    padding: 24px 0 0;
+    padding-right: 222px;
+    padding: var(--spacing-3) 0 0 0;
+    
+}
+::before {
+    content: "";
+    border-bottom: 1px solid #c2c8d0;
+    border-bottom: 1px solid var(--border-default-color);
+    flex: 1 0 auto;
+    height: .5em;
+    margin: 0;
+}
+*, :after, :before {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@media only screen and (max-width: 768px){
+    .side-image{
+        border-radius: 10px 10px 0 0;
+    }
+    .img2 {
+        width: 146%;
+        margin-top: 10%;
+        height: auto;
+        position: absolute;
+        margin-left: 29px;
+    }
+    .text{
+        position: absolute;
+        top: 50%;
+        text-align: center;
+    }
+    .text p,i{
+        font-size: 17px;
+    }
+    .row{
+        max-width: 420px;
+        width: 100%;
+    }
+    .img1{
+        max-width: 47%;
+        height: auto;
+    }
+    .wrapper {
+        object-fit: cover;
+    }
+    .input-box {
+        width: 346px;
+        box-sizing: border-box;
+    }   
+} */

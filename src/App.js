@@ -1,6 +1,6 @@
 
 import Dummy from './Admin/Dummy';
-import VisitorsList from './Admin/VisitorsList';
+
 import './App.css';
 import Navbar from './Admin/Navbar';
 

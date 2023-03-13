@@ -19,7 +19,7 @@ function GuestGrid() {
 
   const   VisitorsList = () => {
     // setList(true);
-    Navigate("/visitor");
+    Navigate("/");
   };
 
 
@@ -47,15 +47,7 @@ function GuestGrid() {
     field: 'timestamp',
     headerName: 'Out Time',
     width: 200,
-    // renderCell: (params) => {
-    //     const handleClick = () => {
-    //       const currentTime = new Date().toLocaleTimeString();
-    //       setTime(currentTime);
-          
-    //       axios.post(`https://localhost:7194/api/Visitors/VisitorCheckOut?id=${params.id}`, { time: currentTime });
-    //     };
-    //     return <button onClick={handleClick}>Check out</button>;
-    //   },
+   
     renderCell: (params) => {
       const [time, setTime] = useState("");
       const [clicked, setClicked] = useState(false);
@@ -78,7 +70,7 @@ function GuestGrid() {
     },
     { field: "personToMeet", headerName: "Person To Meet", width: 200 },
     { field: "visitorPass", headerName: "Visitor Id", width: 200 },
-    { field: "Assest", headerName: "", width: 200 },
+    { field: "Assest", headerName: "Assest", width: 200 },
     
     
   ];
@@ -104,9 +96,9 @@ function GuestGrid() {
 <div class="Guest-dropdown">
 <button   className= "Guest-List-btn">Contractors<Icons.FaCaretDown/></button>
   <div class="Guest-dropdown-content">
-  <a href="employee-list">Employee</a>
-  <a href="longTermContractors-list">Long Term Contractors</a>
-  <a href="othersContractors-list">Other Contractors</a>
+  <a href="employee">Employee</a>
+  <a href="LongTerm">Long Term Contractors</a>
+  <a href="othersContractors">Other Contractors</a>
   </div>
 </div>
         </div>
@@ -125,8 +117,12 @@ function GuestGrid() {
         rows={rows}
         columns={columns}
         
-        pageSize={10}
-        rowsPerPageOptions={[5, 10, 25]}
+               
+        initialState={{
+          pagination: {
+            paginationModel: { pageSize: 25, page: 0 },
+          },
+        }}
         checkboxSelection
         disableSelectionOnClick
       />

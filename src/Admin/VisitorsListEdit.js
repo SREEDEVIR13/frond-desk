@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import * as Icons from "react-icons/fa";
- import "./VisitorsList.css"
+
  import "./dummy.css"
  import Navbar from './Navbar'
  import { Table, TableHead, TableRow, TableCell, TableBody, Checkbox } from '@material-ui/core';

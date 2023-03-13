@@ -1,0 +1,32 @@
+ img{
+        width: 250px;
+    }
+    .logo{
+        padding-top: 100px;
+        position: relative;
+    }
+    .logo-handler{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        padding: 30px 0;
+        z-index: 0;
+    }
+.outer-handler{
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px !important;
+    -webkit-box-shadow: -2px 13px 19px -3px rgba(0,0,0,0.4);
+    -moz-box-shadow: -2px 13px 19px -3px rgba(0,0,0,0.4);
+    box-shadow: -2px 13px 19px -3px rgba(0,0,0,0.4);
+    margin: 20px 40px;
+
+}
+  
+.logo-handler{
+    display: flex;
+    justify-content: center;
+    background-color: #502ACD;
+    padding: 20px 0;
+}

@@ -1,0 +1,348 @@
+/* .card {
+  margin: 2% auto;
+  float: none;
+  width: 90%;
+  height: 800px;
+  background: white;
+  border-radius: 10px;
+  transition: border-radius 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.shadow {
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(190, 190, 190),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+.camera-Icon {
+  float: right;
+  background-color: #7c59ee78;
+  color: #502acd;
+  margin-right: 1%;
+  border-radius: 8%;
+  padding: 2% 4% 2% 4%;
+  margin-top: 1%;
+} */
+.fullName label::after {
+    content: "*";
+    color: red;
+  }
+  .email label::after {
+    content: "*";
+    color: red;
+  }
+  .mobile label::after {
+    content: "*";
+    color: red;
+  }
+  .place label::after {
+    content: "*";
+    color: red;
+  }
+  .visitorPass label::after {
+    content: "*";
+    color: red;
+  }
+  .buildingPass label::after {
+    content: "*";
+    color: red;
+  }
+  .purpose label::after {
+    content: "*";
+    color: red;
+  }
+  .host label::after {
+    content: "*";
+    color: red;
+  }
+  .company label::after {
+    content: "*";
+    color: red;
+  }
+  .required::after {
+    /* position: absolute; */
+      /* content: "*";
+      color: red; */
+    }
+    /* .MuiInputLabel-animated{
+      position: relative;
+    } */
+  /* 
+    .subDiv1{
+      display: flex;
+      flex-direction: column;
+    }
+    .subDiv2{
+      display: flex;
+      flex-direction: column;
+    }
+    .subDiv3{
+      display: flex;
+      flex-direction: column;
+    }
+    .visitor-form{
+      display: flex;
+      flex-direction: row;
+    }
+    .main-div{
+      display: flex;
+      flex-direction: row;
+      column-gap: 15%;
+      padding-left: 5%;
+      padding-left: 5%;
+      padding-bottom: 5%;
+    }
+  
+     */
+     .main-div{
+      display: flex;
+     
+      justify-content: center;
+  
+      flex-wrap: wrap;
+     }
+     @media screen and (min-width: 768px) {
+      .main-div{
+       
+        justify-content: space-between;
+       }
+    }
+     /* .visitor-form{
+      padding: 40px ;
+     }
+     @media screen and (min-width: 768px) {
+      .visitor-form{
+        padding: 40px 70px;
+       }
+    } */
+     .capture-handler{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 16px;
+     }
+    
+    /* .subDiv1 input{
+      appearance: none;
+      all: unset;
+      border: none;
+    } */
+   
+    canvas{
+      width: 250px;
+    }
+    .MuiFormControl-root{
+      display: flex !important;
+    }
+    .clear-button-handler{
+      /* background-color: #502ACD !important; */
+      position: absolute !important;
+      left: 0;
+      bottom: -44px;
+      color: #502ACD  !important;
+    }
+    .save-button-handler{
+      position: absolute !important;
+      right: 0;
+      bottom: -44px;
+      color: #502ACD !important;
+    }
+   .clear-button-handler:hover{
+    color: #F8B52B  !important;
+   }  .save-button-handler:hover{
+      color: #F8B52B  !important;
+    }
+    .subDiv1 .MuiFormControl-root{
+      margin-bottom: 10px !important;
+    }
+    .subDiv2 .MuiFormControl-root{
+      margin-bottom: 10px !important;
+    }
+   
+    /* .camera-Button{
+      position: absolute !important;
+      top: 441px;
+      left: 221px;
+    } */
+    .MuiFormControl-root {
+      position: relative;
+    }
+    .next-button{
+      background-color: #f8b52b !important;
+      color: white !important;
+    }
+    .next-button:hover{
+      background-color: #502ACD !important;
+      -webkit-box-shadow: 0px 0px 12px -2px #502ACD;
+  -moz-box-shadow: 0px 0px 12px -2px  #502ACD;
+  box-shadow: 0px 0px 12px -2px #502ACD;
+     
+    }
+    .capture-handler p{
+     
+      font-weight: bold;
+    }
+    .capture-handler svg{
+      color: #502ACD;
+      font-size: 50px;
+    }
+    .subDiv1{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    .subDiv2{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    .subDiv3{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding-top: 20px;
+    }
+    .signature-handler{
+      margin:20px 0;
+      position: relative !important;
+    }
+    .declaration-field{
+      display: flex;
+     flex-direction: column;
+      padding-top: 40px ;
+      padding-bottom: 20px;
+    }
+    .declaration-field label{
+      margin-bottom: 20px;
+    }
+    .capture-handler img{
+      width: 140px;
+    }
+    .close-button{
+      background-color: #e99e05 !important;
+    }
+    .close-button:hover{
+      background-color: #502ACD !important;
+      color: white !important;
+    }
+    .capture-button{
+      background-color: #e99e05 !important;
+    }
+    .capture-button:hover{
+      background-color: #502ACD !important;
+      color: white !important;
+    }
+    .save-button{
+      background-color: #e99e05 !important;
+    }
+    .save-button:hover{
+      background-color: #502ACD !important;
+    }
+    .cancel-button{
+      background-color:#e99e05 !important;
+      color: white !important;
+    }
+    .cancel-button:hover{
+      background-color: #502ACD !important;
+      color: white !important;
+    }
+   
+    
+    video{
+      width: 100%;
+    }
+    .subDiv1 svg{
+      position: absolute;
+      bottom: 32px;
+      right: 0;
+  
+    }
+    .cancel-buttons{
+      background-color: transparent !important;
+    }
+    @media screen and (min-width: 768px) {
+  
+      .capture-handler p{
+        font-size: 32px;
+  
+      }
+      .capture-handler svg{
+      
+        font-size: 100px;
+      }
+      .subDiv1{
+        display: flex;
+        flex-direction: column;
+        width: calc(100% / 2 - 50px)
+      }
+      .subDiv2{
+        display: flex;
+        flex-direction: column;
+        width: calc(100% / 2 - 50px)
+      }
+      .subDiv3{
+        display: flex;
+        flex-direction: column;
+        width: calc(100% / 2 - 50px);
+        padding-top: 20px;
+      }
+      .signature-handler{
+        margin-top: 15px;
+      }
+      .declaration-field{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 24px 0;
+      }
+      .declaration-field label{
+        margin-bottom: 0;
+      }
+      .capture-handler img{
+        width: 250px;
+      }
+    } 
+    @media screen and (min-width: 992px) {
+      .subDiv1{
+        width: calc(100% / 3 - 100px) ;
+      }
+      .subDiv2{
+       
+        width: calc(100% / 3 - 100px) ;
+      }
+      .subDiv3{
+        padding-top: 0px;
+        width: calc(100% / 3 - 100px) ;
+       
+      }
+    }
+    .capture-handler p::after{
+      display: block;
+      max-width: 50px;
+      height: 3px;
+      background-color: #502ACD;
+      content: "";
+    
+    }
+    .MuiCheckbox-colorSecondary.Mui-checked{
+      color: #502ACD !important;
+    }
+    /* .capture-handler button{
+      background-color: wheat;
+  
+    } */
+    /* .css-78trlr-MuiButtonBase-root-MuiIconButton-root:hover{
+      background-color: rgba(0, 0, 0, 0);
+    } */
+    .subDiv3 .clear-button{
+      background-color: #e99e05 !important;
+      color: white !important;
+    }
+    /* button:hover{
+      background-color: #502ACD !important;
+    } */
+    .clear-button:hover{
+      background-color: #502ACD !important;
+  -webkit-box-shadow: 0px 0px 12px -2px #502ACD;
+  -moz-box-shadow: 0px 0px 12px -2px  #502ACD;
+  box-shadow: 0px 0px 12px -2px #502ACD;
+    }
+  

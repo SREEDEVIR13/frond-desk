@@ -5,48 +5,58 @@ import * as Icons from "react-icons/fa";
 import Navbar from './Navbar'
 import axios from "axios";
 import { Button } from '@mui/material';
-
+import "./VisitorsGrid.css"
 import {  useNavigate } from "react-router-dom";
 // const [List ,setList] = useState(false);
-import "./GuestList.css"
+import "./LongTermContractors.css"
 
-function EmployeeGrid() {
+function LongTermGrid() {
   const [rows, setRows] = useState([]);
 
   const Navigate = useNavigate();
 
 
-  const   OtherContractors = () => {
 
-    Navigate("/othersContractors");
+  const   Employee= () => {
+ 
+    Navigate("/employee");
   };
 
   const   LongTermContractors = () => {
 
-    Navigate("/LongTerm");
+    Navigate("/longTerm");
   };
+  const     AddOtherTermContractor = () => {
+   
+    Navigate("/add-Long");
+  };
+
 
  
   useEffect(() => {
     async function fetchData() {
-      const result = await axios.get('https://localhost:7194/api/Contractor/GetEmployeeContractor');
+      const result = await axios.get('https://localhost:7194/api/Guest/GetGuests');
       setRows(result.data);
     }
     fetchData();
   }, []);
   const columns = [
     // { field: "id", headerName: "ID", width: 90 },
-    { field: "fullName", headerName: "Name", width: 150 },
-   
+    { field: "name", headerName: "Name", width: 150 },
+    { field: "place", headerName: "Place", width: 150 },
+    { field: "mobileNumber", headerName: "Mobile Number", width: 150 ,hide: true},
+    { field: "company", headerName: "Company", width: 200 ,hide: true},
     { field: "dateOfVisit", headerName: "Date Of Visit", width: 150,hide: true },
-    
-    { field: "checkInTime", headerName: "In time", width: 200 },
+    { field: "purposeOfVisit", headerName: "Purpose Of Visit", width: 200,hide: true },
+    { field: "email", headerName: 'Email' , width: 200 },
+ 
+    { field: "inTime", headerName: "In time", width: 200 },
    
 {
     field: 'timestamp',
     headerName: 'Out Time',
     width: 200,
-    
+ 
     renderCell: (params) => {
       const [time, setTime] = useState("");
       const [clicked, setClicked] = useState(false);
@@ -67,9 +77,9 @@ function EmployeeGrid() {
       );
     },
     },
-   
+    { field: "personToMeet", headerName: "Person To Meet", width: 200 },
     { field: "visitorPass", headerName: "Visitor Id", width: 200 },
-  
+    { field: "Assest", headerName: "", width: 200 },
     
     
   ];
@@ -78,35 +88,34 @@ function EmployeeGrid() {
 
 
 
-
   return (
-    <div className='Employee-grid'>
+    <div className='OtherTerm-grid'>
 <Navbar/>
-<div className='Employee-body'>
+<div className='OtherContractors-body'>
 
-    <div className='Employee-top'>
-    <div className="Employee-List-btn-grp">
+    <div className='OtherContractors-top'>
+    <div className="OtherContractors-List-btn-grp">
           
-          <button   style= {{backgroundColor:"rgb(225, 232, 235)"}}   className= "Employee-List-btn">Employee</button>
-          <button   onClick={() => {
+          <button  onClick={() => {
+                 
+                 Employee();
+                  }}   className= "OtherContractors-List-btn">Employee</button>
+          <button  onClick={() => {
                  
                  LongTermContractors();
-                 }}  className= "Employee-List-btn">Long Term Contractors</button>
+                  }}  className= "OtherContractors-List-btn">Long Term Contractors</button>
 
-<button  onClick={() => {
-                 
-                 OtherContractors();
-                 }}   className= "Employee-List-btn">Other Contractors</button>
+<button style= {{backgroundColor:"rgb(225, 232, 235)"}}  className= "OtherContractors-List-btn">Other Contractors</button>
 
 
       </div>
 
 
-    <div className='Employee-icons'>
+    <div className='OtherContractors-icons'>
     <button onClick={() => {
                    
-                   AddVisitor();
-                   }}  className="Employee-add-btn">Add Employee</button>
+                   AddOtherTermContractor();
+                   }}  className="OtherContractors-add-btn">Add Other Contractors</button>
     </div>
     </div>
 
@@ -115,12 +124,13 @@ function EmployeeGrid() {
         rows={rows}
         columns={columns}
         
-              
+      
+                
         initialState={{
-          pagination: {
-            paginationModel: { pageSize: 25, page: 0 },
-          },
-        }}
+            pagination: {
+              paginationModel: { pageSize: 25, page: 0 },
+            },
+          }}
         checkboxSelection
         disableSelectionOnClick
       />
@@ -130,7 +140,7 @@ function EmployeeGrid() {
   );
 }
 
-export default EmployeeGrid;
+export default LongTermGrid;
 
 
 

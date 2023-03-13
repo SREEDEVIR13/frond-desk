@@ -1,0 +1,1 @@
+export const VisitorForm_url="https://localhost:7194/api/Visitors/AddVisitor";

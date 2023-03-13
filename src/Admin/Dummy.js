@@ -1,57 +1,34 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import { DataGrid } from "@mui/x-data-grid";
+import React, { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
-function App() {
-  const [rows, setRows] = useState([]);
+function Navbar({ onSearch }) {
+  const [searchValue, setSearchValue] = useState("");
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  useEffect(() => {
-    async function fetchData() {
-      const result = await axios.get("https://localhost:7194/api/Visitors/GetAllVistors");
-      setRows(result.data);
-    }
-    fetchData();
-  }, []);
-
-  const columns = [
-    { field: "id", headerName: "ID", width: 70 },
-    { field: "title", headerName: "Title", width: 200 },
-    { field: "body", headerName: "Body", width: 500 },
-    {
-      field: "timestamp",
-      headerName: "Timestamp",
-      width: 150,
-      renderCell: (params) => {
-        return (
-          <button onClick={() => handleClick(params.row.id)}>Show Time</button>
-        );
-      },
-    },
-  ];
-
-  const handleClick = (visitorId) => {
-    const date = new Date();
-    const timestamp = date.toISOString();
-  axios.post("https://localhost:7194/api/Visitors/VisitorCheckOut?id=",
-{
-      visitorId,
-      timestamp,
-    })
-    .then((response) => {
-      console.log(response);
-      // handle successful response
-    })
-    .catch((error) => {
-      console.log(error);
-      // handle error
-    });
+  const handleSearch = () => {
+    onSearch(searchValue);
   };
 
   return (
-    <div style={{ height: 400, width: "100%" }}>
-      <DataGrid rows={rows} columns={columns} pageSize={5} checkboxSelection />
+    <div className="navbar">
+      <h2>Visitors Management System</h2>
+      {location.pathname === "/visitor" && (
+        <div className="search-bar">
+          <input
+            type="text"
+            placeholder="Search by name or email..."
+            value={searchValue}
+            onChange={(e) => setSearchValue(e.target.value)}
+          />
+          <button onClick={handleSearch}>Search</button>
+        </div>
+      )}
+      <button onClick={() => navigate("/visitor")}>Visitors List</button>
+      <button onClick={() => navigate("/guest")}>Guest List</button>
+      {/* ... */}
     </div>
   );
 }
 
-export default App;
+export default Navbar;
